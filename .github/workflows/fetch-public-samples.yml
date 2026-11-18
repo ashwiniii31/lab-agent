@@ -1,0 +1,36 @@
+# One-off: fetch 20 synthetic invoices from Hugging Face into samples/public/.
+# Delete this file after it has run once.
+name: fetch-public-samples
+on: workflow_dispatch
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download 20 images
+        run: |
+          python3 - <<'PY'
+          import json, urllib.request, pathlib
+          ds = "Shubhal829/high-quality-invoice-images-for-ocr"
+          tree = json.load(urllib.request.urlopen(f"https://huggingface.co/api/datasets/{ds}/tree/main/data"))
+          jpgs = sorted(f["path"] for f in tree if f["type"] == "file" and f["path"].endswith(".jpg"))[:20]
+          out = pathlib.Path("samples/public"); out.mkdir(parents=True, exist_ok=True)
+          lines = []
+          for i, p in enumerate(jpgs, 1):
+              name = f"public_{i:02d}_{pathlib.Path(p).name}"
+              url = f"https://huggingface.co/datasets/{ds}/resolve/main/{p}"
+              urllib.request.urlretrieve(url, out / name)
+              lines.append(f"- `{name}` ← [{p}](https://huggingface.co/datasets/{ds}/blob/main/{p}) (ODbL)")
+          s = pathlib.Path("samples/SOURCES.md")
+          s.write_text(s.read_text().replace("<!-- PUBLIC_FILES -->", "\n".join(lines)))
+          print("\n".join(lines))
+          PY
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898182+github-actions[bot]@users.noreply.github.com"
+          git add samples/public samples/SOURCES.md
+          git commit -m "samples: add 20 public synthetic invoices"
+          git push
