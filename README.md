@@ -1,11 +1,12 @@
 # lab-agent
+Goal: An agent that turns an invoice into clean JSON, and returns null with a reason instead of guessing.
 
-<!-- Goal: one sentence, in your own words. -->
+## Not in this repo
+No employer code, documents, data or keys. Public samples only.
 
-## How to run
+## Design
+![design](docs/design-0.1.png)
+<your 0.1 failure table>
 
-<!-- Your steps: create the venv, install, copy .env.example to .env, run the script. -->
-
-## Note
-
-<!-- One line saying this repo contains no employer code or data. -->
+## Status
+Phase 0: setup
