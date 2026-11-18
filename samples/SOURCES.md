@@ -8,7 +8,26 @@ Dataset: [Shubhal829/high-quality-invoice-images-for-ocr](https://huggingface.co
 
 Per-file list (filled in automatically when the files were fetched):
 
-<!-- PUBLIC_FILES -->
+- `public_01_batch1-0001-2.jpg` ← [data/batch1-0001-2.jpg](https://huggingface.co/datasets/Shubhal829/high-quality-invoice-images-for-ocr/blob/main/data/batch1-0001-2.jpg) (ODbL)
+- `public_02_batch1-0001.jpg` ← [data/batch1-0001.jpg](https://huggingface.co/datasets/Shubhal829/high-quality-invoice-images-for-ocr/blob/main/data/batch1-0001.jpg) (ODbL)
+- `public_03_batch1-0002-2.jpg` ← [data/batch1-0002-2.jpg](https://huggingface.co/datasets/Shubhal829/high-quality-invoice-images-for-ocr/blob/main/data/batch1-0002-2.jpg) (ODbL)
+- `public_04_batch1-0002.jpg` ← [data/batch1-0002.jpg](https://huggingface.co/datasets/Shubhal829/high-quality-invoice-images-for-ocr/blob/main/data/batch1-0002.jpg) (ODbL)
+- `public_05_batch1-0003-2.jpg` ← [data/batch1-0003-2.jpg](https://huggingface.co/datasets/Shubhal829/high-quality-invoice-images-for-ocr/blob/main/data/batch1-0003-2.jpg) (ODbL)
+- `public_06_batch1-0003.jpg` ← [data/batch1-0003.jpg](https://huggingface.co/datasets/Shubhal829/high-quality-invoice-images-for-ocr/blob/main/data/batch1-0003.jpg) (ODbL)
+- `public_07_batch1-0004-2.jpg` ← [data/batch1-0004-2.jpg](https://huggingface.co/datasets/Shubhal829/high-quality-invoice-images-for-ocr/blob/main/data/batch1-0004-2.jpg) (ODbL)
+- `public_08_batch1-0004.jpg` ← [data/batch1-0004.jpg](https://huggingface.co/datasets/Shubhal829/high-quality-invoice-images-for-ocr/blob/main/data/batch1-0004.jpg) (ODbL)
+- `public_09_batch1-0005-2.jpg` ← [data/batch1-0005-2.jpg](https://huggingface.co/datasets/Shubhal829/high-quality-invoice-images-for-ocr/blob/main/data/batch1-0005-2.jpg) (ODbL)
+- `public_10_batch1-0005.jpg` ← [data/batch1-0005.jpg](https://huggingface.co/datasets/Shubhal829/high-quality-invoice-images-for-ocr/blob/main/data/batch1-0005.jpg) (ODbL)
+- `public_11_batch1-0006-2.jpg` ← [data/batch1-0006-2.jpg](https://huggingface.co/datasets/Shubhal829/high-quality-invoice-images-for-ocr/blob/main/data/batch1-0006-2.jpg) (ODbL)
+- `public_12_batch1-0006.jpg` ← [data/batch1-0006.jpg](https://huggingface.co/datasets/Shubhal829/high-quality-invoice-images-for-ocr/blob/main/data/batch1-0006.jpg) (ODbL)
+- `public_13_batch1-0007-2.jpg` ← [data/batch1-0007-2.jpg](https://huggingface.co/datasets/Shubhal829/high-quality-invoice-images-for-ocr/blob/main/data/batch1-0007-2.jpg) (ODbL)
+- `public_14_batch1-0007.jpg` ← [data/batch1-0007.jpg](https://huggingface.co/datasets/Shubhal829/high-quality-invoice-images-for-ocr/blob/main/data/batch1-0007.jpg) (ODbL)
+- `public_15_batch1-0008-2.jpg` ← [data/batch1-0008-2.jpg](https://huggingface.co/datasets/Shubhal829/high-quality-invoice-images-for-ocr/blob/main/data/batch1-0008-2.jpg) (ODbL)
+- `public_16_batch1-0008.jpg` ← [data/batch1-0008.jpg](https://huggingface.co/datasets/Shubhal829/high-quality-invoice-images-for-ocr/blob/main/data/batch1-0008.jpg) (ODbL)
+- `public_17_batch1-0009-2.jpg` ← [data/batch1-0009-2.jpg](https://huggingface.co/datasets/Shubhal829/high-quality-invoice-images-for-ocr/blob/main/data/batch1-0009-2.jpg) (ODbL)
+- `public_18_batch1-0009.jpg` ← [data/batch1-0009.jpg](https://huggingface.co/datasets/Shubhal829/high-quality-invoice-images-for-ocr/blob/main/data/batch1-0009.jpg) (ODbL)
+- `public_19_batch1-0010-2.jpg` ← [data/batch1-0010-2.jpg](https://huggingface.co/datasets/Shubhal829/high-quality-invoice-images-for-ocr/blob/main/data/batch1-0010-2.jpg) (ODbL)
+- `public_20_batch1-0010.jpg` ← [data/batch1-0010.jpg](https://huggingface.co/datasets/Shubhal829/high-quality-invoice-images-for-ocr/blob/main/data/batch1-0010.jpg) (ODbL)
 
 ## edge/ (10 files)
 Made by me, fictional data. Generated as PNGs for the 0.1 failure table.
