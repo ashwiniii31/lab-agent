@@ -15,7 +15,8 @@ jobs:
           import json, urllib.request, pathlib
           ds = "Shubhal829/high-quality-invoice-images-for-ocr"
           tree = json.load(urllib.request.urlopen(f"https://huggingface.co/api/datasets/{ds}/tree/main/data"))
-          jpgs = sorted(f["path"] for f in tree if f["type"] == "file" and f["path"].endswith(".jpg"))[:20]
+          jpgs = sorted(f["path"] for f in tree if f["type"] == "file" and f["path"].endswith(".jpg") and not f["path"].endswith("-2.jpg"))[:20]
+          import shutil; shutil.rmtree("samples/public", ignore_errors=True)
           out = pathlib.Path("samples/public"); out.mkdir(parents=True, exist_ok=True)
           lines = []
           for i, p in enumerate(jpgs, 1):
@@ -24,13 +25,14 @@ jobs:
               urllib.request.urlretrieve(url, out / name)
               lines.append(f"- `{name}` ← [{p}](https://huggingface.co/datasets/{ds}/blob/main/{p}) (ODbL)")
           s = pathlib.Path("samples/SOURCES.md")
-          s.write_text(s.read_text().replace("<!-- PUBLIC_FILES -->", "\n".join(lines)))
+          t = s.read_text(); head = "when the files were fetched):\n\n"; a = t.index(head) + len(head); b = t.index("\n\n## edge/")
+          s.write_text(t[:a] + "\n".join(lines) + t[b:])
           print("\n".join(lines))
           PY
       - name: Commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898182+github-actions[bot]@users.noreply.github.com"
-          git add samples/public samples/SOURCES.md
-          git commit -m "samples: add 20 public synthetic invoices"
+          git add -A samples/public samples/SOURCES.md
+          git commit -m "samples: replace duplicates with 20 distinct public invoices"
           git push
